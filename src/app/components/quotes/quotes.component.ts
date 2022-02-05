@@ -6,8 +6,8 @@ import { User } from '../../models/User';
   styleUrls: ['./quotes.component.scss']
 })
 export class QuotesComponent implements OnInit {
+  quoteimage: string = 'assets/quote/quotation.png' ;
 
-  quoteimage: string = 'assets/quotation.png';
 
   published: boolean = false;
     likes: any = 0;

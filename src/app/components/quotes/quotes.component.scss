@@ -79,10 +79,11 @@ ul {
             }
         }
         &-delete {
-            & img {
+            & i {
                 height: 2rem;
                 cursor: pointer;
                 transition: 0.3s;
+                color: #ff7f00;
                 &:hover {
                     transition: 0.3s;
                     transform: scale(1.1);
