@@ -5,7 +5,7 @@ Quotee web app also allows the user to publish Quotes from other people.
 ### Screenshot
 ![ScreenShot](https://github.com/Eugene-Oluoch/Quote-App/blob/master/src/assets/quotee.png)
 ## LIVE DEMO
-[live](https://eugene-oluoch.github.io/quote-app)
+[live](https://eugene-oluoch.github.io/Quote-App)
 ## Get Started
 To get a local copy to your machine.
 ### Setup
