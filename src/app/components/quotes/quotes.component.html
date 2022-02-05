@@ -1,1 +1,49 @@
-<p>quotes works!</p>
+<ul>
+    <li *ngFor="let user of users">
+        <div class="li" #divLi>
+            <section class="quote-container">
+                <div class="quote-container-first">
+                    <h3><img [src]="quoteimage" alt="quote">{{ user.quote }}</h3>
+                    <p>-- {{ user.author }}</p>
+                </div>
+                <div class="quote-container-arrow">
+                    <i [ngClass]="user.hide?'fas fa-chevron-circle-down':'fas fa-chevron-circle-up'" (click)="user.hide = !user.hide"></i>
+                </div>
+            </section>
+            <section class="quote-details" *ngIf="!user.hide">
+                <div class="quote-details-by">
+                    <h4><span>Posted by:</span> {{ user.name }}</h4>
+                    <h5>--Posted: {{ user.date | dateAgo}}</h5>
+                </div>
+                <div class="quote-details-last">
+                    <div class="quote-details-last-vote">
+                        <p #up [style]="likes"></p>
+                        <i class="fas fa-thumbs-up up" (click)="addLike(up)"></i>
+                        <i class="fas fa-thumbs-down down" (click)="addDisLike(down)"></i>
+                        <p #down [style]="dislikes"></p>
+                    </div>
+                    <div class="quote-details-last-delete">
+                        <img src="../../../assets/trash.png" alt="trash" (click)="deleteQuote(divLi)">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </li>
+</ul>
+<section class="new-quote-container">
+    <h2 id="new-quote">New Quote</h2>
+    <article class="new-quote">
+        <form class="new-quote-form" (submit)="addUser($event, inputName.value, inputAuthor.value,inputTextarea.value)">
+            <h4>Name</h4>
+            <input type="text" name="name" id="name" #inputName required minLength="2">
+            <h4>Author</h4>
+            <input type="text" name="author" id="author" #inputAuthor required minLength="2">
+            <h4>Quote</h4>
+            <textarea name="quote" id="quote" cols="30" rows="10" #inputTextarea required minLength="5"></textarea>
+            <div>
+                <button class="btn" type="submit">Publish</button>
+            </div>
+        </form>
+
+    </article>
+</section>

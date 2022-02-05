@@ -1,0 +1,281 @@
+ul {
+    position: relative;
+    bottom: 3rem;
+}
+
+.li {
+    margin-block: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 .2rem .2rem hsl(0, 0%, 95%);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 80vw;
+    max-width: 700px;
+    margin-inline: auto;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 .5rem .3rem hsl(0, 0%, 90%);
+        transform: translateY(-0.2rem);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.quote-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-first {
+        & h3 {
+            padding-bottom: 1rem;
+            font-weight: bolder;
+            & img {
+                width: 2rem;
+                padding-right: .5rem;
+            }
+        }
+        & p {
+            position: relative;
+            left: 2rem;
+            bottom: .5rem;
+        }
+    }
+    &-arrow {
+        & i {
+            cursor: pointer;
+        }
+    }
+}
+
+.quote-details {
+    padding-top: 2rem;
+    &-by {
+        padding-left: 1rem;
+        & span {
+            color: #ff7f00;
+        }
+        & h5 {
+            padding-left: .5rem;
+            padding-top: .5rem;
+        }
+    }
+    &-last {
+        display: flex;
+        justify-content: space-between;
+        &-vote {
+            padding-left: 1rem;
+            padding-top: 1rem;
+            & p {
+                display: inline;
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
+            & i {
+                height: 2rem;
+                transition: 0.3s;
+                &:hover {
+                    transition: 0.3s;
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &-delete {
+            & img {
+                height: 2rem;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.up {
+    color: hsl(120, 100%, 35%);
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.down {
+    cursor: pointer;
+    color: hsl(0, 100%, 60%);
+    position: relative;
+    top: .4rem;
+}
+
+.new-quote-container {
+    & h2 {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 2rem;
+        margin-block: 2rem;
+    }
+}
+
+.new-quote {
+    &:hover {
+        transform: translateY(-0.3rem);
+        transition: 0.3s ease-in-out;
+    }
+    transition: 0.3s ease-in-out;
+    margin-inline: auto;
+    width: 80vw;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 0 .3rem .3rem hsl(0, 0%, 95%);
+    padding: 2rem 1rem 5rem 1rem;
+    border-radius: .5rem;
+    margin-block: 2rem;
+    & form {
+        & h4 {
+            font-size: 1rem;
+            margin-block: .5rem;
+        }
+        & input {
+            border: 2px solid hsl(0, 0%, 90%);
+            border-radius: .5rem;
+            width: 70vw;
+            max-width: 450px;
+            padding: .7rem .5rem;
+            color: hsl(30, 100%, 60%);
+            &:focus {
+                outline: none;
+            }
+        }
+        & textarea {
+            width: 70vw;
+            max-width: 450px;
+            border: 2px solid hsl(0, 0%, 90%);
+            border-radius: .5rem;
+            resize: vertical;
+            padding: 1rem .5rem;
+            color: hsl(30, 100%, 60%);
+            &:focus {
+                outline: none;
+            }
+        }
+        & div {
+            & button {
+                float: right;
+                margin-block: 1rem;
+                padding: .7rem 1.5rem;
+                background-color: #ff7f00;
+                color: white;
+                border: 1px solid #ff7f00;
+                border-radius: .5rem;
+                cursor: pointer;
+                &:hover {
+                    animation: jello-horizontal 0.9s both;
+                }
+            }
+        }
+    }
+}
+
+
+/* From cssbuttons.io by @Gumpack */
+
+.btn {
+    background-image: linear-gradient(45deg, #FF512F 0%, #ff7f00 51%, #FF512F 100%)
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+}
+
+.btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+//button
+@keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+//media push
+@media (min-width:769px) {
+    ul {
+        position: relative;
+        bottom: 5rem;
+    }
+}
+
+//media querries
+@media (min-width:320px) {
+    .quote-container-first {
+        & h3 {
+            font-size: .8rem;
+        }
+    }
+}
+
+@media (min-width:520px) {
+    .quote-container-first {
+        & h3 {
+            font-size: .9rem;
+        }
+    }
+}
+
+@media (min-width:720px) {
+    .quote-container-first {
+        & h3 {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (min-width:920px) {
+    .quote-container-first {
+        & h3 {
+            font-size: 1.2rem;
+        }
+    }
+}
