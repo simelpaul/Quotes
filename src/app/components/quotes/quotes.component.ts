@@ -23,6 +23,7 @@ export class QuotesComponent implements OnInit {
       this.users.unshift({quote:quote,author:author,name:name,hide:true,date: this.date});
   
       alert("Quote Published")
+      e.target.reset();
   
       }
     }
