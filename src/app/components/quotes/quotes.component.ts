@@ -53,24 +53,24 @@ export class QuotesComponent implements OnInit {
         {
           quote:'The way to get started is to quit talking and begin doing.',
           author:'Walt Disney',
-          name:'Eugene Mark Oluoch',
+          name:'Erick Barnes',
           hide:true,
-          date: '2022-02-04T06:14:31'
+          date: '2022-04-15T08:14:31'
         },
         {
-          quote:"You learn more from failure than from success. Don't let it stop you. Failure builds character.",
+          quote:"Men aint trash.",
           author:'anonymous',
-          name:'Eugene Mark Oluoch',
+          name:'Paul Simel',
           hide:true,
-          date: '2022-02-04T06:28:53'
+          date: '2022-04-14T02:28:53'
   
         },
         {
           quote:"If life were predictable it would cease to be life and be without flavour.",
           author:"Eleanor Roosevelt",
-          name:"Eugene Mark Oluoch",
+          name:"Paul Simel",
           hide:true,
-          date: '2022-02-04T06:28:53'
+          date: '2022-04-14T02:28:53'
   
         }
   
